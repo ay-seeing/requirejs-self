@@ -3,35 +3,39 @@
   appDir: './',
   // 脚本的根路径
   // 相对于程序的根路径
-  baseUrl: 'asset/js',
+  baseUrl: 'asset',
   // 打包输出的路径
   // 所有在程序根目录下的文件都将会被复制到该目录下
   // 相对于程序的根路径
   dir: 'build',
   // 模块(modules)的相对路径
   paths: {
-    "jquery": ["http://libs.baidu.com/jquery/2.0.3/jquery","js/jquery"],
     "app": "js/app",
-    "indexHtml": "template/index.html?5367",
-    "listHtml": "template/list.html?90"
-  }
+    "indexHtml": "template/index.html",
+    "listHtml": "template/list.html"
+  },
   // 需要打包合并的js模块，数组形式，可以有多个
   // name 以 baseUrl 为相对路径，无需写 .js 后缀
   // 比如 main 依赖 a 和 b ， a 又依赖 c ，则 {name: "main"} 会把 c.js a.js b.js main.js 合并成一个 main.js
   modules: [
     // {name: "../../p"},
-    {name: '../../main'}
+    {name: '../main'}
     // 也可以强制建立依赖关系（即使main.js的代码里没有依赖d.js和e.js，在代码合并的时候将它们插入到 main.js 前面）
     /*{
       name: "../../main",
       include: ["../../d","../../e"]
     }*/
-  ],
+  ]//,
   // 通过正则以文件名排除文件 / 文件夹
   // 比如当前的正则表示排除 .svn 、.git　等这类隐藏的文件
   // fileExclusionRegExp: /^\./,
   // 自动优化应用程序下的css文件
-  // 允许的值："none" , "standard" , "standard.keepLines" , "standard.keepComments" , "standard.keepComments.keepLines"
+  // 允许的值：
+  // "none"不压缩仅合并； 
+  // "standard"标准压缩，去换行、空格、注释
+  // "standard.keepLines" 除标准压缩外，保留换行
+  // "standard.keepComments"  除标准压缩外,保留注释
+  // "standard.keepComments.keepLines"  除标准压缩外，保留换行和注释
   // optimizeCss: none,
   // 优化器（optimizer）将从输出目录中删除已合并的文件
   // removeCombined: false,
@@ -68,8 +72,8 @@
     }
   },*/
   // 延迟（毫秒）
-  waitSeconds: 15
-})
+  // waitSeconds: 15
+});
 
 
 
