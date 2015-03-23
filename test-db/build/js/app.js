@@ -1,0 +1,1 @@
+define([],function(){function t(){var e=location.hash.replace(/^#/,"");return e=e||"index","js/controller/"+e}var e={};return e.start=function(){require([t()],function(e){new e})},window.onhashchange=function(){e.start()},e});

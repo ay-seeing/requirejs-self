@@ -1,6 +1,6 @@
 require.config({
   appDir: './',
-	baseUrl: "asset",
+	baseUrl: "./",
 	paths: {
 		"jquery": ["http://libs.baidu.com/jquery/2.0.3/jquery","js/jquery"],
 		"app": "js/app",

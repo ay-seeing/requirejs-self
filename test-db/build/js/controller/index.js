@@ -1,0 +1,1 @@
+define(["text!indexHtml"],function(e){function t(){document.getElementById("main").innerHTML=e}return t});
