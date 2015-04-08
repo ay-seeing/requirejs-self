@@ -3,7 +3,7 @@ require.config({
 	baseUrl: "asset",
 	paths: {
 		"jquery": ["http://libs.baidu.com/jquery/2.0.3/jquery","vendor/jquery"],
-    "handlebars": "vendor/handlebars.js",
+    "handlebars": "vendor/handlebars",
 		"app": "js/app",
 		"indexHtml": "template/index.html",
 		"listHtml": "template/list.html"
