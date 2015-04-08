@@ -1,10 +1,16 @@
 require.config({
-  appDir: './',
+  // appDir: '../',
 	baseUrl: "asset",
 	paths: {
-		"jquery": ["http://libs.baidu.com/jquery/2.0.3/jquery","vendor/jquery"],
+    // Open source framework
+    "jquery": "vendor/jquery",
+    "text": "vendor/text",
     "handlebars": "vendor/handlebars",
-		"app": "js/app",
+
+    // team modules
+    "app": "js/app",
+
+    // Template
 		"indexHtml": "template/index.html",
 		"listHtml": "template/list.html"
 	},
@@ -14,6 +20,9 @@ require.config({
   shim: {
     'handlebars': {
       exports: 'Handlebars'
+    },
+    backbone: {
+      deps: ['_','jquery']
     }
   }
 });
