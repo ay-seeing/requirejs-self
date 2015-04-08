@@ -1,7 +1,7 @@
 /*
- *
- *
- *
+ * author   ay-seeing
+ * date     2015-5-8
+ * version  1.0
 */
 
 define(function(){
