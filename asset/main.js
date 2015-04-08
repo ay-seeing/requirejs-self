@@ -6,6 +6,9 @@ require.config({
     "jquery": "vendor/jquery",
     "text": "vendor/text",
     "handlebars": "vendor/handlebars",
+    '_': 'vendor/underscore',
+    // backbone 依赖 underscore
+    'backbone': 'vendor/backbone',
 
     // team modules
     "app": "js/app",
@@ -22,6 +25,7 @@ require.config({
       exports: 'Handlebars'
     },
     backbone: {
+      // 显示依赖
       deps: ['_','jquery']
     }
   }
