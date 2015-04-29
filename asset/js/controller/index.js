@@ -1,31 +1,28 @@
-/*
- * @fileOverview    首页控制器
- * @author    ay-seeing
-*/
-
 define([
+	'text!headerHtml',
 	'text!indexHtml',
-	'handlebars'
-], function(str){
+	'text!footerHtml'
+],function(indexHtml){
 	var View = Backbone.View.extend({
-		className: "index.page",
+		className: 'index-page',
 		events: {
-			'click .js-link': 'goListAction'
+			'click .js-lick': 'goListAction'
 		},
 		render: function(){
-			this.$el.html(str);
+			this.$el.html(indexHtml);
 		},
 		/*
-		 * @description
-		 * 跳转到列表页
+		 * @ description
+		 * @ 跳转列表页
+		 * @ 
+		 * @ 
+		 *
 		*/
 		goListAction: function(e){
-			// 阻止默认事件
 			e.preventDefault();
 			var link = $(e.target).attr('href');
 			Backbone.history.navigate(link, true);
 		}
 	});
-	
 	return View;
 });
