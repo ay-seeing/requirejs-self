@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: './asset',
+  baseUrl: 'asset',
   shim: {
     jquery: {
       exports: '$'
@@ -13,10 +13,10 @@ require.config({
   },
   paths: {
     // Open source framework
-    'jquery': 'verdor/jquery-2.1.3',
-    'text': 'verdor/text',
-    '_': 'verdor/underscore',
-    'backbone': 'verdor/backbone',
+    'jquery': 'vendor/jquery-2.1.3',
+    'text': 'vendor/text',
+    '_': 'vendor/underscore',
+    'backbone': 'vendor/backbone',
 
     // Team modules
     'app': 'js/app',
