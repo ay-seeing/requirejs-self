@@ -6,7 +6,7 @@ require.config({
     },
     /*underscore: {
       exports: '_'
-    },*/
+    },*/ 
     backbone: {
       deps: ['_', 'jquery']
     }
@@ -20,14 +20,13 @@ require.config({
 
     // Team modules
     'app': 'js/app',
-    'hotTopic': 'js/view/hotTopic',
+    // 'link': 'js/controller/link',
 
     // Template
     'headerHtml': 'template/header.html',
     'footerHtml': 'template/footer.html',
     'indexHtml': 'template/index.html',
-    'listHtml': 'template/list.html',
-    'topicHtml': 'template/hotTopic.html'
+    'listHtml': 'template/list.html'
   }
 });
 

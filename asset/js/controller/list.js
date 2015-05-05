@@ -1,12 +1,16 @@
 define([
-  'text!listHtml'
-], function(listHtml){
+  'text!headerHtml',
+  'text!listHtml',
+  'text!footerHtml'
+], function(headerHtml, listHtml, footerHtml){
   var View = Backbone.View.extend({
     className: 'list-page',
     events: {
       "click .js-link": 'goListAction' 
     },
     render: function(){
+      $("#header").html(headerHtml);
+      $("#footer").html(footerHtml);
       this.$el.html(listHtml);
     },
     goListAction: function(e){
@@ -15,5 +19,5 @@ define([
       Backbone.history.navigate(link,true);
     }
   });
-  return View();
+  return View;
 });
